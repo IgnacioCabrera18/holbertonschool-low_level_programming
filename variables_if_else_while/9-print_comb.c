@@ -34,3 +34,15 @@ int main(void)
 
 	return (0);
 }
+
+/**
+ *el ejercicio tambien es correcto con for
+ *ejemplo:
+ *for (num = cero; num <= nueve; num++)
+ *if (num < '9')
+ *putchar(num)
+ *putchar(',')
+ *putchar(' ')
+ *"espacio en planco"
+ *putchar('\n')
+ */
