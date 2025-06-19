@@ -11,6 +11,7 @@ int main(void)
 
 	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
+	/*al escribir != excluye las letras seleccionadas*/
 	if (alphabet != 'q' && alphabet != 'e')
 	putchar(alphabet);
 	}
