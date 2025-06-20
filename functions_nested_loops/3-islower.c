@@ -8,6 +8,10 @@
 
 int _islower(int c)
 {
+	/**
+	 * no es necesario especificar nada
+	 * el valor de islower ya se especifico en 3-main.c
+	 */
 	if (islower(c))
 	{
 	return (1);
