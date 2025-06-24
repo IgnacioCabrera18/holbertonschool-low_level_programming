@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  *times_table - is the main function
@@ -7,13 +8,31 @@
 
 void times_table(void)
 {
-	int nine;
+	int x, y, multiplicar;
 
-	for (nine = 0; nine <= 81; nine = nine * 9)
+	for (x = 0; x <= 9; x++)
 	{
-	_putchar (nine + '0');
-	_putchar (',');
-	_putchar (' ');
+		for (y = 0; y <= 9; y++)
+		{
+			multiplicar = x * y;
+
+			if (y != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+				if (multiplicar < 10)
+					_putchar(' ');
+			}
+			if (multiplicar >= 10)
+			{
+				_putchar((multiplicar / 10) + '0');
+				_putchar((multiplicar % 10) + '0');
+			}
+			else
+			{
+				_putchar(multiplicar + '0');
+			}
+		}
+		_putchar('\n');
 	}
-	_putchar ('\n');
 }
