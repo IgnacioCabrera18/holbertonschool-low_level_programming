@@ -9,17 +9,17 @@
 
 void print_array(int *a, int n)
 {
-	n = 0;
-	while (n <= 5000)
+	int i;
+
+	for (i = 0; i <= n; i++)
 	{
-		if (n < 4)
+		if (i < 4)
 		{
-			printf("%d, ", a[n]);
+			printf("%d, ", a[i]);
 		}
-		else if (n == 4)
+		else if (i == 4)
 		{
-			printf("%d\n", a[n]);
+			printf("%d\n", a[i]);
 		}
-		n++;
 	}
 }
