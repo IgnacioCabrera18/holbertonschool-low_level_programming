@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- *
- *
+ *cap_string - is the main function
+ *@s: is an pointer of the string
+ *Return: return s
  */
 
 char *cap_string(char *s)
