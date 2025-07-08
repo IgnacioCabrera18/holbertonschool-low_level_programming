@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *
- *
- *
- *
+ *_strstr - is the main function
+ *@haystack: is a pointer
+ *@needle: is a pointer
+ *Return: return haystack / '\0'
  */
 
 char *_strstr(char *haystack, char *needle)
