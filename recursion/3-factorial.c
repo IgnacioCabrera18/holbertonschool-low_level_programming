@@ -4,7 +4,6 @@
  *factorial - is the main function
  *@n: is an int of factorial
  *Return: factorial
- *
  */
 
 int factorial(int n)
