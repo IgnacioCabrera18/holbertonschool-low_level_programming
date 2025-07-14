@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- *
- *
+ *_primo - is the second main function
+ *@test: is the test
+ *@primo: is the num primo
+ *Return: 0 or 1
  */
 
 int _primo(int test, int primo)
@@ -17,8 +19,12 @@ int _primo(int test, int primo)
 	}
 	return (_primo(test + 1, primo));
 }
-
+/**
+ *is_prime_number - is thr main function
+ *@n: is an int
+ *Return: the second main function
+ */
 int is_prime_number(int n)
 {
-	return (_primo(2,n));
+	return (_primo(2, n));
 }
