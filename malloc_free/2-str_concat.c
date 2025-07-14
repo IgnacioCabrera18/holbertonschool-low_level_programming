@@ -13,21 +13,19 @@ char *str_concat(char *s1, char *s2)
 	char *a;
 	int i, j, len1, len2;
 
-	if (s1 == NULL)
+	if (s1 != NULL)
 	{
-		return (NULL);
+		for (len1 = 0; s1[len1] != '\0'; len1++)
+		{
+			continue;
+		}
 	}
-	if (s2 == NULL)
+	if (s2 != NULL)
 	{
-		return (NULL);
-	}
-	for (len1 = 0; s1[len1] != '\0'; len1++)
-	{
-		continue;
-	}
-	for (len2 = 0; s2[len2] != '\0'; len2++)
-	{
-		continue;
+		for (len2 = 0; s2[len2] != '\0'; len2++)
+		{
+			continue;
+		}
 	}
 	/* largo de ambos string mas NULL*/
 	a = malloc(sizeof(char) * (len1 + len2 + 1));
