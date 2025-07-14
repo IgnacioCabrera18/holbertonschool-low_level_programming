@@ -16,10 +16,12 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	/*recorre el largo de la str*/
 	for (len = 0; str[len] != '\0'; len++)
 	{
 		continue;
 	}
+	/*asigna el largo de la str (+1 por el caracter NULL)*/
 	a = malloc(sizeof(char) * len + 1);
 	if (a == NULL)
 	{
