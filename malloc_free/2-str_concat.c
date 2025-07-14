@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
- *
+ *str_concat - conectar dos string
+ *@s1: primer str
+ *@s2: segundo str
+ *Return: NULL o s1 + s2
  */
 
 char *str_concat(char *s1, char *s2)
@@ -33,13 +33,16 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < len1; i++)
+	else
 	{
-		a[i] = s1[i];
-	}
-	for (j = 0; j < len2; j++)
-	{
-		a[i + j] = s2[j];
+		for (i = 0; i < len1; i++)
+		{
+			a[i] = s1[i];
+		}
+		for (j = 0; j < len2; j++)
+		{
+			a[i + j] = s2[j];
+		}
 	}
 	return (a);
 }
