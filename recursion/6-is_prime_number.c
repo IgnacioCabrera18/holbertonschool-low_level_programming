@@ -5,14 +5,20 @@
  *
  */
 
-int is_prime_number(int n)
+int _primo(int test, int primo)
 {
-	if (n % n == 0 && n % 1 == 0)
+	if (primo == test)
 	{
 		return (1);
 	}
-	else if (n != 1)
+	else if (primo % test == 0 || primo < 2)
 	{
 		return (0);
 	}
+	return (_primo(test + 1, primo));
+}
+
+int is_prime_number(int n)
+{
+	return (_primo(2,n));
 }
