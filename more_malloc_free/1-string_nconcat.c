@@ -14,25 +14,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 	unsigned int i, j, len1 = 0, len2 = 0;
 
-	if (s1 != NULL)
+	if (s1 == NULL)
 	{
-		for (len1 = 0; s1[len1] != '\0'; len1++)
-		{
-			continue;
-		}
+		s1 = "";
 	}
-	else
+	if (s2 == NULL)
 	{
-
+		s2 = "";
 	}
-	if (s2 != NULL)
+	for (len1 = 0; s1[len1] != '\0'; len1++)
 	{
-		/*corta antes de n bytes de memoria*/
-		/*por eso no imrpime toda la str*/
-		for (len2 = 0; s2[len2] != '\0' && len2 < n; len2++)
-		{
-			continue;
-		}
+		;
+	}
+	for (len2 = 0; (s2[len2] != '\0' && len2 < n); len2++)
+	{
+		;
 	}
 	a = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (a == NULL)
@@ -43,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		a[i] = s1[i];
 	}
-	for (j = 0; j < n; j++)
+	for (j = 0; j < len2; j++)
 	{
 		a[i + j] = s2[j];
 	}
