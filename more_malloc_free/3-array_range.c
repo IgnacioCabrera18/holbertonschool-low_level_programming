@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
- *
+ *array_range - array de int's
+ *@min: es un int
+ *@max: es un int
+ *Return: NULL o a
  */
 
 int *array_range(int min, int max)
@@ -27,7 +27,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 	/*ordena a desde min hasta max*/
-	for (i = 0; min <= max; i++)
+	for (i = 0; i <= max; i++)
 	{
 		a[i] = min;
 		min++;
