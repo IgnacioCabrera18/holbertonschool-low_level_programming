@@ -2,10 +2,8 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
- *
+ *print_dog - printear la estructura de dog
+ *@d: puntero a esructura de dog
  */
 
 void print_dog(struct dog *d)
