@@ -2,32 +2,36 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *
- *
- *
+ *cp_str - funcion encargada de copiar un str
+ *@s: es un str
+ *Return: a
  */
 
 char *cp_str(char *s)
 {
 	int i, len;
 	char *a;
-
+	/*largo del str hasta NULL*/
 	for (len = 0; s[len] != '\0'; len++)
 		;
+	/*el espacio de memoria de a sera igual al largo del str + NULL*/
 	a = malloc(len + 1);
 	if (a == NULL)
 		return (NULL);
+	/*copia cada caracter*/
 	for (i = 0; i <= len; i++)
 		a[i] = s[i];
 	return (a);
 }
 
 /**
- *
- *
- *
- *
+ *new_dog - es la funcion principal
+ *@name: es el nombre del perro
+ *@age: es la edad del perro
+ *@owner: es el propietario del perro
+ *Return: NULL o d
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
@@ -35,6 +39,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
+	/*funciona similar a strcpy*/
+	/*copia la str de name en una nueva incluyendo NULL*/
 	d->name = cp_str(name);
 	if (d->name == NULL)
 	{
@@ -52,39 +58,3 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (d);
 }
-/*tamien lo hice asi pero el checker no dejo :)*/
-/*dog_t *new_dog(char *name, float age, char *owner)
-{
-	dog_t *d;
-	char *cp_name, *cp_owner;
-
-	d = malloc(sizeof(dog_t));
-	if (d == NULL)
-		return (NULL);*/
-	/*cp_name tendra el mismo espacio de memoria que name + NULL*/
-	/*cp_name = malloc(sizeof(name) + 1);
-	if (cp_name == NULL)
-	{
-		free(d);
-		return (NULL);
-	}*/
-	/*strcpy copia name en cp_name*/
-	/*copia la string mas el caracter NULL*/
-	/*strcpy(cp_name, name);*/
-	/*cp_owner tendra el mismo espacio de memoria que owner + NULL*/
-	/*cp_owner = malloc(sizeof(owner) + 1);
-	if (cp_owner == NULL)
-	{
-		free(d);
-		free(cp_name);
-		return (NULL);
-	}*/
-	/*ya explique que hace strcpy*/
-	/*strcpy(cp_owner, owner);
-
-	d->name = cp_name;
-	d->age = age;
-	d->owner = cp_owner;
-	
-	return (d);
-}*/
