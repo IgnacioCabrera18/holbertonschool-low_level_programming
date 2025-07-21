@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
+ *print_list - printear lista
+ *@h: puntero a un nodo de la lista list_t
+ *Return: nodos
  */
 
 size_t print_list(const list_t *h)
