@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- *d: es un puntero a la estructura de dog
+ *free_dog - liberar memoria
+ *@d: es un puntero a la estructura de dog
  */
 
 void free_dog(dog_t *d)
