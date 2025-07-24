@@ -1,0 +1,25 @@
+#include "lists.h"
+#include <stdlib.h>
+
+/**
+ *add_dnodeint - agrega nuevoo nodo alfinal de la lista
+ *@head: puntero a puntero de head
+ *@n: es un const int
+ *Return: NULL o new
+ */
+
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+{
+	dlistint_t *new = malloc(sizeof(dlistint_t));
+
+	if (new == NULL)
+	{
+		return (NULL);
+	}
+	new->prev = NULL;
+	new->next = *head;
+	new->n = n;
+	*head = new;
+
+	return (new);
+}
