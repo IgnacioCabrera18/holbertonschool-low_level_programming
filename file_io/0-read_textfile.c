@@ -5,10 +5,10 @@
 #include <sys/stat.h>
 
 /**
- *
- *
- *
- *
+ *read_textfile - lee un archivo de texto
+ *@filename: el nombredel archivo a leer
+ *@letters: numero de letras a leer y imprimir
+ *Return: 0 o bytes_write
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
