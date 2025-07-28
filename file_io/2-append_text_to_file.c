@@ -3,10 +3,10 @@
 #include "main.h"
 
 /**
- *
- *
- *
- *
+ *append_text_to_file - agrega texto al final
+ *@filename: el nombre del archivo
+ *@text_content: el contenido del texto
+ *Return: -1 o 1
  */
 
 int append_text_to_file(const char *filename, char *text_content)
@@ -19,7 +19,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	files = open(filename, O_WRONLY | O_APPEND);
 	if (files == -1)
 		return (-1);
-	
+
 	if (text_content != NULL)
 	{
 		while (text_content[len])
@@ -33,6 +33,6 @@ int append_text_to_file(const char *filename, char *text_content)
 		}
 	}
 
-	close (files);
+	close(files);
 	return (1);
 }
