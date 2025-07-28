@@ -2,9 +2,9 @@
 #include "hash_tables.h"
 
 /**
- *
- *
- *
+ *hash_table_create - crear una tabla hash
+ *@size: es el tamanio de la array
+ *Return: NULL o ht
  */
 
 hash_table_t *hash_table_create(unsigned long int size)
@@ -19,7 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (ht == NULL)
 		return (NULL);
 	ht->size = size;
-	ht->array = malloc(sizeof(hash_table_t *) * size);
+	ht->array = malloc(sizeof(hash_table_t *hash_table_create) * size);
 	if (ht->array == NULL)
 	{
 		free(ht);
