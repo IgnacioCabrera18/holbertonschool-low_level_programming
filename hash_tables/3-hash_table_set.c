@@ -4,11 +4,11 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
- *
- *
+ *hash_table_set - Añade un elemento a la tabla hash
+ *@ht: La tabla hash a la que se va a añadir o actualizar lakey/vaue.
+ *@key: La key.
+ *@value: El value asociado a la key.
+ *Return: 0 o 1.
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -35,28 +35,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		temp = temp->next;
 	}
-	new =malloc(sizeof(hash_node_t));
+	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (0);
 
 
 	new->key = strdup(key);
-	if (new->key == NULL)
-	{
-		free(new);
-		return (0);
-	}
-
 	new->value = strdup(value);
-	if (new->value == NULL)
+	if (new->value == NULL || new->key == NULL)
 	{
 		free(new->key);
+		free(new->value);
 		free(new);
 		return (0);
 	}
 
 	new->next = ht->array[index];
 	ht->array[index] = new;
-
 	return (1);
 }
